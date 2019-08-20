@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Skin Cancer Classification</title>
+
+	<link href="/static/css/w3.css" rel="stylesheet" type="text/css" />
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+	<script src="/static/js/inputefile.js"></script>
+	<style>
+		html,body,h2,h3,h4 {font-family: Helvetica, sans-serif}
+    </style>
+</head>
+<body class="w3-pale-yellow" data-gr-c-s-loaded="true">
+	<!-- w3-content defines a container for fixed size centered content,
+	and is wrapped around the whole page content. -->
+	<div class="w3-content card" style="max-width:960px">
+		<!--1. Home page tab-->
+		<div class="tabbed w3-animate-opacity w3-white" id="home">
+			<!--Header-->
+			<div class="w3-center title adjust-fontcolor logo">
+	
+			  <img src="/static/img/icon.png">
+			  <h1 class="space-letters w3-text-blue"><i class="fa fa-plus-square w3-padding" style="font-size:40px;color:red"></i><b>Skin Cancer Classification</b></h1>
+			 
+			</div>
+			<!-- Front page image -->
+			<!-- This image will be replaced once the js code runs. -->
+
+			<div class="w3-center add-padding w3-border add-margin side-margin w3-round w3-pale-blue">
+				<h1>Your image:</h1>
+			    <img src="{{ url_for('static', filename= './images/test.jpg',_t=val1) }}" width="400" height="400" alt="your image is lost"/>
+
+				<h5 class="new-font">Results</h5>
+				<p id='result'><p>
+				<div>{{val2}}</div>
+				<div>{{val3}}</div>
+			</div>
+
+			<!--test-->
+			<div class="w3-center">
+			    <form action="" enctype='multipart/form-data' method='POST'>
+			        <a href="javascript:;" class="a-upload">Choose File
+			        <input type="file" name="file" id=""/></a>
+			        <input type="submit" value="submit" class="w3-btn w3-blue w3-round w3-margin-bottom adjust-spacing w3-hover-red btn-font w3-padding w3-space-letters w3-card-4"/>
+			    </form>
+			    
+			</div>
+
+		</div>
+	
+	</div>
+</body>
+</html>
